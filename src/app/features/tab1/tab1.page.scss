@@ -1,0 +1,20 @@
+ion-tabs {
+    margin-top: 56px;
+}
+
+ion-tab-bar {
+    height: 45px;
+    ion-tab-button {
+        color: #1F1F1F !important;
+        width: 50%;
+        max-width: none;
+
+        &.tab-selected {
+            border-bottom : 3px solid #80C4E1;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid #ddd;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.product-info {
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    h2 {
+        font-size: 13px;
+    }
+}
+
+
+
+.chat-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    .chat-input-wrapper {
+        margin: 10px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 80%;
+    }
+}
+
+.chat-title {
+    display: flex;
+    ion-icon {
+        width: 30px;
+        height: 25px;
+    }
+}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="chat-title">
+      <ion-icon name="chevron-back-outline" (click)="back()"></ion-icon>
+      <ion-title>chat</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="product-info">
+    <img src="./assets/images/testImage.png"/>
+    <h2>샴푸, 린스 샘플 나눔합니다</h2>
+  </div>
+
+  <div class="chat">
+    <div *ngFor="let chat of socketData">
+      <p [class.me]="chat.user=='me'" [class.user]="chat.user=='other'">
+        <span>{{chat.data}}</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-bottom">
+    <div class="chat-input-wrapper">
+      <ion-input [(ngModel)]="text"></ion-input>
+    </div>
+    <button (click)="send()">전송</button>
+  </div>
+</ion-content>

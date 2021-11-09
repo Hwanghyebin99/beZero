@@ -1,0 +1,13 @@
+ion-tab-button {
+    &.tab-selected {
+        color: #65ACC2 !important;
+    }
+
+    ion-label {
+        color : #1F1F1F !important;
+    }
+}
+
+ion-tab-bar {
+    height: 70px;
+}

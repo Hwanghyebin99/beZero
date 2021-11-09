@@ -24,3 +24,14 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('./styles/fonts.css');
+
+body {
+    font-family: NanumBarunGothicOTF, sans-serif !important;
+    font-size: 14px !important;
+    outline: 0;
+}
+
+p, h1, h2, h3, h4, span {
+    font-family: NanumBarunGothicOTF, sans-serif !important;
+}

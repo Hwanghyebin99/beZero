@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'NanumBarunGothicOTF';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/NanumBarunGothicOTFA.woff2') format('woff2'),
+         url('/assets/fonts/NanumBarunGothicOTFA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NanumBarunGothicOTF';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/NanumBarunGothicOTFBoldA.woff2') format('woff2'),
+         url('/assets/fonts/NanumBarunGothicOTFBoldA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF';
+    font-weight: 800;
+    src: url('/assets/fonts/NanumSquareOTFEB00.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NanumSquareOTF';
+    font-weight: 700;
+    src: url('/assets/fonts/NanumSquareOTFB00.woff') format('woff');
+}

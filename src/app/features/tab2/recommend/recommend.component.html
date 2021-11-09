@@ -1,0 +1,32 @@
+<ion-content>
+  <div>
+    <ion-slides #sliders (ionSlidesDidLoad)='slidesDidLoad(sliders) 'pager='true' [options]='slideOpts'>
+    <ion-slide>
+      <img class="main-image" src="./assets/images/bottle.png" alt="main-image"/>
+    </ion-slide>
+    <ion-slide>
+      <img class="main-image" src="./assets/images/grocery.png" alt="main-image"/>
+    </ion-slide>
+  </ion-slides>
+  </div>
+  <div>
+    <div class="search-box">
+      <ion-input></ion-input>
+      <button class="search-button"></button>
+    </div>
+    <div *ngFor="let item of shopData" class="shop-item">
+      <img src="./assets/images/ugly-soap.jpg" [alt]="title"/>
+      <div>
+        <span>{{item.subtitle}}</span>
+        <h4>{{item.title}}</h4>
+        <div>
+          <span class="cost-before">{{item.cost}}</span>
+          <span class="cost">{{item.discount}}</span>
+        </div>
+        <ng-template *ngIf="item.discount==''">
+          <span class="cost">{{item.cost}}</span>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</ion-content>

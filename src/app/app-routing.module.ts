@@ -3,8 +3,31 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path: '', pathMatch: 'full', redirectTo: 'login'
+  },
+    {
+    path: 'tabs',
+    loadChildren: () => import('./features/tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./features/login/login-main/login-main.module').then( m => m.LoginMainPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./features/chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'chatting',
+    loadChildren: () => import('./features/chatting/chatting.module').then( m => m.ChattingPageModule)
+  },
+  {
+    path: 'mypage',
+    loadChildren: () => import('./features/mypage/mypage.module').then( m => m.MypagePageModule)
+  },
+  {
+    path: 'chatting',
+    loadChildren: () => import('./features/chatting/chatting.module').then( m => m.ChattingPageModule)
   }
 ];
 @NgModule({

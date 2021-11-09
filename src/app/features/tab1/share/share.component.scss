@@ -1,0 +1,64 @@
+ion-select {
+    border: 1px solid #ddd;
+    width: 130px;
+    border-radius: 5px;
+    margin: 10px;
+    padding-right: 8px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.product-info-wrapper {
+    display: flex;
+    border-top : 1px solid #F5F5F5;
+    padding: 8px 0;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 60px;
+    }
+
+    h4 {
+        font-size: 14px;
+        font-family: NanumBarunGothicOTF, sans-serif !important;
+
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+        margin: 4px;
+        margin: 20px;
+    }
+
+    .date-text {
+        color: #7C7C7C;
+        font-size: 12px;
+    }
+
+    .place-text {
+        color : #404040;
+        font-size: 12px;
+    }
+
+    .quantity-text {
+        color: #464646;
+        font-size: 14px;
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    .chat-button {
+        background-image: url('../../../../assets/icon/chat.svg');
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        right: 30px;
+    }
+}
+

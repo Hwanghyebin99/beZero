@@ -1,0 +1,19 @@
+<ion-content>
+  <ion-select placeholder="카테고리" [(ngModel)]="category">
+      <ion-select-option value="all">All</ion-select-option>
+      <ion-select-option value="f">화장품</ion-select-option>
+      <ion-select-option value="m">일회용품</ion-select-option>
+  </ion-select>
+  <div>
+    <div class="product-info-wrapper" *ngFor="let product of products">
+      <img src="./assets/images/testImage.png"/>
+      <div>
+        <h4>{{product.title}}</h4>
+        <p class="place-text">{{product.place}}</p>
+        <p class="date-text">등록일 {{product.date}}</p>
+        <p class="quantity-text">수량 <span>{{product.quantity}}</span></p>
+      </div>
+      <button class="chat-button"></button>
+    </div>
+  </div>
+</ion-content>

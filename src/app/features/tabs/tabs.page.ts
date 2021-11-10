@@ -21,7 +21,7 @@ export class TabsPage implements OnInit{
 
   subscribeRoute() {
     this.activatedRoute.url.subscribe((url)=> {
-      if(this.router.url==='/tabs/chat') {
+      if(this.router.url==='/chatting') {
         this.bottomTab = false;
       } else {
         this.bottomTab= true;

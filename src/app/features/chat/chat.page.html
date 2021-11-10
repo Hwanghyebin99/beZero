@@ -8,16 +8,8 @@
 </ion-header>
 
 <ion-content>
-  <div class="product-info" (click)="chat()">
-    <img src="./assets/images/testImage.png"/>
-    <h2>샴푸, 린스 샘플 나눔합니다</h2>
-  </div>
-  <div class="product-info">
-    <img src="./assets/images/testImage.png"/>
-    <h2>종이박스 구해요~</h2>
-  </div>
-  <div class="product-info">
-    <img src="./assets/images/testImage.png"/>
-    <h2>젓가락 가져가세요!!!!!</h2>
+  <div *ngFor="let chatRoom of chatRoomList" class="product-info" (click)="chat(chatRoom.roomId)">
+    <img [src]="chatRoom.image | getImageUrl | async"/>
+    <h2>{{chatRoom.title}}</h2>
   </div>
 </ion-content>

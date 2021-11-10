@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { ChatPageRoutingModule } from './chat-routing.module';
 
 import { ChatPage } from './chat.page';
+import { GetImageUrlPipe } from '../../core/get-image-url.pipe';
+import { CoreModule } from '../../core/core.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ChatPageRoutingModule
+    ChatPageRoutingModule,
+    CoreModule
   ],
-  declarations: [ChatPage]
+  declarations: [ChatPage],
+  providers: [GetImageUrlPipe]
 })
 export class ChatPageModule {}

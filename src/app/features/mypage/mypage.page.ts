@@ -11,11 +11,15 @@ export class MypagePage implements OnInit {
     private navCtrl: NavController
   ) {}
 
-  socketData;
+  myData;
 
   ngOnInit() {
+    this.initMyData();
   }
 
+  initMyData() {
+    this.myData = JSON.parse(localStorage.getItem('user'));
+  }
   
   back() {
     this.navCtrl.back();

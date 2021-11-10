@@ -9,14 +9,14 @@
 
 <ion-content>
   <div class="product-info">
-    <img src="./assets/images/testImage.png"/>
-    <h2>샴푸, 린스 샘플 나눔합니다</h2>
+    <img [src]="chatInfo?.image | getImageUrl | async"/>
+    <h2>{{chatInfo?.title}}</h2>
   </div>
 
   <div class="chat">
     <div *ngFor="let chat of socketData">
-      <p [class.me]="chat.user=='me'" [class.user]="chat.user=='other'">
-        <span>{{chat.data}}</span>
+      <p [class.me]="chat.user==userId" [class.user]="chat.user!=userId">
+        <span>{{chat.message}}</span>
       </p>
     </div>
   </div>

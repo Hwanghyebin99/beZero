@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import firebase from 'firebase/compat/app';
 
 @Component({
   selector: 'app-chat',
@@ -14,23 +15,40 @@ export class ChatPage implements OnInit {
     private navCtrl: NavController
   ) {}
 
-  socketData;
+  /**
+   * 채팅 방 리스트
+   */
+  chatRoomList = [];
+
+  /**
+   * 유저 uid
+   */
+  userUid;
 
   ngOnInit() {
+    this.userUid= JSON.parse(localStorage.getItem('user')).uid;
     this.initData();
   }
 
+  snapshotToArray = (snapshot: any) => {
+    const returnArr = [];
+  
+    snapshot.forEach((childSnapshot: any) => {
+        const item = childSnapshot.val();
+        returnArr.push(item);
+    });
+  
+    return returnArr;
+  };
+
   initData() {
-    this.socketData = [
-      {
-        user: 'me',
-        data: '나는 바보'
-      }
-    ]
+    firebase.database().ref(`users/${this.userUid}`).get().then((resp)=>{
+      this.chatRoomList = this.snapshotToArray(resp);
+    });
   }
 
-  chat() {
-    this.router.navigate(['chatting']);
+  chat(value) {
+    this.router.navigate([`chatting`], { queryParams: { roomId: value } });
   }
   
   back() {

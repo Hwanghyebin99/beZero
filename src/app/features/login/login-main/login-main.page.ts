@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'app-login-main',
@@ -8,13 +9,16 @@ import { Router } from '@angular/router';
 })
 export class LoginMainPage implements OnInit {
 
-  constructor(private router: Router) { }
-
+  constructor(
+    public authService: AuthService,
+    public router: Router,  
+    public ngZone: NgZone) {
+  }
   ngOnInit() {
   }
 
   login() {
-    this.router.navigate(['tabs/tab1']);
+    this.authService.GoogleAuth();
   }
 
 }

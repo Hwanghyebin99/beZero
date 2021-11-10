@@ -26,5 +26,13 @@ div {
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
+        background-color: #fff;
+        background-image: url('../../../../assets/icon/google.png');
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
     }
 }
